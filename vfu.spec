@@ -15,7 +15,7 @@ Vendor:		Vladi Belperchinov-Shabanski "Cade" <cade@biscom.net>
 Source:		%{name}-%{version}-source.tgz
 Distribution:	Freshmeat RPMs
 Packager:	Ryan Weaver <ryanw@infohwy.com>
-BuildRoot:	/var/tmp/%{name}-%{version}
+BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
 VFU is console (text mode) file manager for UNIX/Linux.
