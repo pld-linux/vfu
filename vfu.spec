@@ -7,7 +7,8 @@ Group:		Shells
 URL:		http://www.biscom.net/~cade/vfu
 Vendor:		Vladi Belperchinov-Shabanski "Cade" <cade@biscom.net>
 Source:		http://www.biscom.net/~cade/away/%{name}-%{version}-source.tgz
-Patch:		vfu-ncurses.patch
+Patch0:		vfu-ncurses.patch
+Patch1:		vfu-opt.patch
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
@@ -40,10 +41,11 @@ Main features are:
 
 %prep
 %setup -q
-%patch -p0
+%patch0 -p0
+%patch1 -p1
 
 %build
-CFLAGS=$RPM_OPT_FLAGS ./build
+./build
 
 cp -p ftparc/README ftparc/README-ftparc
 
