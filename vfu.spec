@@ -9,7 +9,7 @@ Vendor:		Vladi Belperchinov-Shabanski "Cade" <cade@biscom.net>
 Source:		http://www.biscom.net/~cade/away/%{name}-%{version}-source.tgz
 Patch0:		vfu-ncurses.patch
 Patch1:		vfu-opt.patch
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 VFU is console (text mode) file manager for UNIX/Linux.
