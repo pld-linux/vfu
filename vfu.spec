@@ -1,20 +1,13 @@
-%define	name	vfu
-%define	version	1.46
-%define	release	1
-%define	serial	1
-
 Summary:	VFU is console (text mode) file manager for UNIX/Linux.
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
-Serial:		%{serial}
+Name:		vfu
+Version:	1.51
+Release:	1
 Copyright:	GPL
 Group:		Shells
 URL:		http://www.biscom.net/~cade/vfu
 Vendor:		Vladi Belperchinov-Shabanski "Cade" <cade@biscom.net>
-Source:		%{name}-%{version}-source.tgz
-Distribution:	Freshmeat RPMs
-Packager:	Ryan Weaver <ryanw@infohwy.com>
+Source:		http://www.biscom.net/~cade/away/%{name}-%{version}-source.tgz
+Patch:		vfu-ncurses.patch
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
@@ -47,27 +40,31 @@ Main features are:
 
 %prep
 %setup -q
+%patch -p0
 
 %build
-./build
+CFLAGS=$RPM_OPT_FLAGS ./build
 
 cp -p ftparc/README ftparc/README-ftparc
 
 %install
-if [ -e $RPM_BUILD_ROOT ]; then rm -rf $RPM_BUILD_ROOT; fi
-mkdir -p $RPM_BUILD_ROOT/{etc,usr/bin}
-install    -m 644 vfu.conf	$RPM_BUILD_ROOT/etc
-install -s -m 755 vfu/vfu	$RPM_BUILD_ROOT%{_bindir}
-install -s -m 755 ftparc/ftparc	$RPM_BUILD_ROOT%{_bindir}
+rm -rf $RPM_BUILD_ROOT
+
+install -d $RPM_BUILD_ROOT/{etc,%{_bindir}}
+install vfu.conf	$RPM_BUILD_ROOT/etc
+install -s vfu/vfu	$RPM_BUILD_ROOT%{_bindir}
+install -s ftparc/ftparc	$RPM_BUILD_ROOT%{_bindir}
+
+gzip -9nf vfu/README README.DOS CONFIG HISTORY \
+	VFU.txt XWINDOW ftparc/README-ftparc
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%defattr(-,root,root)
-%doc vfu/COPYING vfu/README README.DOS  vfu/CONFIG vfu/HISTORY vfu/INSTALL
-%doc vfu/VFU.txt XWINDOW ftparc/README-ftparc
-
-%{_bindir}/vfu
-%{_bindir}/ftparc
+%defattr(644,root,root,755)
+%doc {vfu/README,README.DOS,CONFIG,HISTORY}.gz
+%doc {VFU.txt,XWINDOW,ftparc/README-ftparc}.gz
+%attr(755,root,root) %{_bindir}/vfu
+%attr(755,root,root) %{_bindir}/ftparc
 %config /etc/vfu.conf
