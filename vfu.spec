@@ -5,8 +5,6 @@ Version:	1.51
 Release:	1
 License:	GPL
 Group:		Applications/Shells
-Group(de):	Applikationen/Shells
-Group(pl):	Aplikacje/Pow³oki
 Vendor:		Vladi Belperchinov-Shabanski "Cade" <cade@biscom.net>
 Source0:	http://www.biscom.net/~cade/away/%{name}-%{version}-source.tgz
 Patch0:		%{name}-ncurses.patch
