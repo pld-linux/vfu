@@ -7,6 +7,7 @@ License:	GPL
 Group:		Applications/Shells
 Vendor:		Vladi Belperchinov-Shabanski "Cade" <cade@biscom.net>
 Source0:	http://www.biscom.net/~cade/away/%{name}-%{version}-source.tgz
+# Source0-md5:	f3b2ee81a574b36c3871bb7fb02486ca
 Patch0:		%{name}-ncurses.patch
 Patch1:		%{name}-opt.patch
 URL:		http://www.biscom.net/~cade/vfu/
