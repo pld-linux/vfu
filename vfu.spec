@@ -57,8 +57,8 @@ cp -p ftparc/README ftparc/README-ftparc
 if [ -e $RPM_BUILD_ROOT ]; then rm -rf $RPM_BUILD_ROOT; fi
 mkdir -p $RPM_BUILD_ROOT/{etc,usr/bin}
 install    -m 644 vfu.conf	$RPM_BUILD_ROOT/etc
-install -s -m 755 vfu/vfu	$RPM_BUILD_ROOT/usr/bin
-install -s -m 755 ftparc/ftparc	$RPM_BUILD_ROOT/usr/bin
+install -s -m 755 vfu/vfu	$RPM_BUILD_ROOT%{_bindir}
+install -s -m 755 ftparc/ftparc	$RPM_BUILD_ROOT%{_bindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -68,8 +68,8 @@ rm -rf $RPM_BUILD_ROOT
 %doc vfu/COPYING vfu/README README.DOS  vfu/CONFIG vfu/HISTORY vfu/INSTALL
 %doc vfu/VFU.txt XWINDOW ftparc/README-ftparc
 
-/usr/bin/vfu
-/usr/bin/ftparc
+%{_bindir}/vfu
+%{_bindir}/ftparc
 %config /etc/vfu.conf
 
 %changelog
