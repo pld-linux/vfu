@@ -1,5 +1,5 @@
 Summary:	VFU is console (text mode) file manager for UNIX/Linux
-Summary(pl):	VFU - tekstowy zarz±dca plików dla uniksa/Linuksa
+Summary(pl):	VFU - tekstowy zarz±dca plików dla Uniksa/Linuksa
 Name:		vfu
 Version:	4.03
 Release:	0.1
@@ -41,13 +41,13 @@ are:
 - and much more...
 
 %description -l pl
-VFU jest konsolowym (tekstowym) zarz±dc± plików dla uniksa/Linuksa.
+VFU jest konsolowym (tekstowym) zarz±dc± plików dla Uniksa/Linuksa.
 G³ówne jego zalety to:
 - tryb tekstowy (tak!)
 - szybkie polecenia jednoklawiszowe
 - kopiowanie/przenoszenie/usuwanie wybranych plików/jednego
   pliku/jednego pliku kiedy wiêcej jest wybranych
-- pytanie o nadpianie przy kopiowaniu/przenoszeniu
+- pytanie o nadpisanie przy kopiowaniu/przenoszeniu
   (tak/nie/zawsze/nigdy)
 - uzupe³nianie nazw (tak¿e rozszerzone, np. '*some[az].zip')
 - u¿yteczna funkcja zmiany katalogu (z histori± i ulubionymi
