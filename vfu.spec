@@ -10,6 +10,7 @@ Source0:	http://www.ibiblio.org/pub/Linux/utils/file/managers/%{name}-%{version}
 # http://soul.datamax.bg/~cade/vfu/vfu-4.03.src.tar.gz - painfully slow transfer
 URL:		http://soul.datamax.bg/~cade/vfu/
 BuildRequires:	libstdc++-devel
+BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
