@@ -1,16 +1,15 @@
 Summary:	VFU is console (text mode) file manager for UNIX/Linux
 Summary(pl):	VFU - tekstowy zarz±dca plików dla uniksa/Linuksa
 Name:		vfu
-Version:	1.51
-Release:	1
+Version:	4.03
+Release:	0.1
 License:	GPL
 Group:		Applications/Shells
-Vendor:		Vladi Belperchinov-Shabanski "Cade" <cade@biscom.net>
-Source0:	http://www.biscom.net/~cade/away/%{name}-%{version}-source.tgz
-# Source0-md5:	f3b2ee81a574b36c3871bb7fb02486ca
-Patch0:		%{name}-ncurses.patch
-Patch1:		%{name}-opt.patch
-URL:		http://www.biscom.net/~cade/vfu/
+Source0:	http://www.ibiblio.org/pub/Linux/utils/file/managers/%{name}-%{version}.tar.gz
+# Source0-md5:	153fdc2cf616fcc99b8d67c7cd2e1826
+# http://soul.datamax.bg/~cade/vfu/vfu-4.03.src.tar.gz - painfully slow transfer
+URL:		http://soul.datamax.bg/~cade/vfu/
+BuildRequires:	libstdc++-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -73,28 +72,25 @@ G³ówne jego zalety to:
 
 %prep
 %setup -q
-%patch0 -p0
-%patch1 -p1
 
 %build
 ./build
 
-cp -p ftparc/README ftparc/README-ftparc
-
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_sysconfdir},%{_bindir}}
+install -d $RPM_BUILD_ROOT{%{_sysconfdir},%{_bindir},%{_mandir}/man1}
 
-install vfu.conf	$RPM_BUILD_ROOT%{_sysconfdir}
-install vfu/vfu		$RPM_BUILD_ROOT%{_bindir}
-install ftparc/ftparc	$RPM_BUILD_ROOT%{_bindir}
+install vfu/vfu $RPM_BUILD_ROOT%{_bindir}
+install rx/rx_* $RPM_BUILD_ROOT%{_bindir}
+install vfu.1 $RPM_BUILD_ROOT%{_mandir}/man1
+install vfu.conf $RPM_BUILD_ROOT%{_sysconfdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc vfu/README README.DOS CONFIG HISTORY VFU.txt XWINDOW ftparc/README-ftparc
-%attr(755,root,root) %{_bindir}/vfu
-%attr(755,root,root) %{_bindir}/ftparc
-%config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/vfu.conf
+%doc CONFIG FAQ HISTORY INSTALL NOTES README README.DOS THANKS.TO TODO XWINDOW.NOTES
+%attr(755,root,root) %{_bindir}/*
+%{_mandir}/man?/*
+%config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/*
