@@ -1,5 +1,5 @@
 Summary:	VFU is console (text mode) file manager for UNIX/Linux
-Summary(pl):	VFU - tekstowy menad¿er plików dla uniksa/Linuksa
+Summary(pl):	VFU - tekstowy zarz±dca plików dla uniksa/Linuksa
 Name:		vfu
 Version:	1.51
 Release:	1
@@ -40,8 +40,8 @@ are:
 - and much more...
 
 %description -l pl
-VFU jest konsolowym (tekstowym) menad¿erem plików dla unika/Linuksa.
-G³ówne zalety to:
+VFU jest konsolowym (tekstowym) zarz±dc± plików dla uniksa/Linuksa.
+G³ówne jego zalety to:
 - tryb tekstowy (tak!)
 - szybkie polecenia jednoklawiszowe
 - kopiowanie/przenoszenie/usuwanie wybranych plików/jednego
@@ -88,16 +88,12 @@ install vfu.conf	$RPM_BUILD_ROOT%{_sysconfdir}
 install vfu/vfu		$RPM_BUILD_ROOT%{_bindir}
 install ftparc/ftparc	$RPM_BUILD_ROOT%{_bindir}
 
-gzip -9nf vfu/README README.DOS CONFIG HISTORY \
-	VFU.txt XWINDOW ftparc/README-ftparc
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {vfu/README,README.DOS,CONFIG,HISTORY}.gz
-%doc {VFU.txt,XWINDOW,ftparc/README-ftparc}.gz
+%doc vfu/README README.DOS CONFIG HISTORY VFU.txt XWINDOW ftparc/README-ftparc
 %attr(755,root,root) %{_bindir}/vfu
 %attr(755,root,root) %{_bindir}/ftparc
 %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/vfu.conf
