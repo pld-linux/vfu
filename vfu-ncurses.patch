@@ -1,0 +1,11 @@
+--- vslib/unicon.h~	Mon Feb 15 10:17:50 1999
++++ vslib/unicon.h	Tue Jul 13 20:03:48 1999
+@@ -17,7 +17,7 @@
+ 
+ #ifdef _TARGET_UNIX_
+   #if defined(_TARGET_LINUX_)
+-  #include <curses.h>
++  #include <ncurses/ncurses.h>
+   #elif defined(_TARGET_NETBSD_)
+   #include <ncurses.h>
+   #else
