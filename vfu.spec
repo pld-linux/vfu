@@ -54,8 +54,8 @@ rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT/{etc,%{_bindir}}
 install vfu.conf	$RPM_BUILD_ROOT/etc
-install -s vfu/vfu	$RPM_BUILD_ROOT%{_bindir}
-install -s ftparc/ftparc	$RPM_BUILD_ROOT%{_bindir}
+install vfu/vfu	$RPM_BUILD_ROOT%{_bindir}
+install ftparc/ftparc	$RPM_BUILD_ROOT%{_bindir}
 
 gzip -9nf vfu/README README.DOS CONFIG HISTORY \
 	VFU.txt XWINDOW ftparc/README-ftparc
