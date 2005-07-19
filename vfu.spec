@@ -1,13 +1,12 @@
 Summary:	VFU is console (text mode) file manager for UNIX/Linux
 Summary(pl):	VFU - tekstowy zarz±dca plików dla Uniksa/Linuksa
 Name:		vfu
-Version:	4.03
+Version:	4.05
 Release:	0.1
 License:	GPL
 Group:		Applications/Shells
 Source0:	http://www.ibiblio.org/pub/Linux/utils/file/managers/%{name}-%{version}.tar.gz
-# Source0-md5:	153fdc2cf616fcc99b8d67c7cd2e1826
-# http://soul.datamax.bg/~cade/vfu/vfu-4.03.src.tar.gz - painfully slow transfer
+# Source0-md5:	63e822f9d61f1c9430867a115141a5a3
 URL:		http://soul.datamax.bg/~cade/vfu/
 BuildRequires:	libstdc++-devel
 BuildRequires:	ncurses-devel
@@ -79,11 +78,9 @@ G³ówne jego zalety to:
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_sysconfdir},%{_bindir},%{_mandir}/man1}
+install -d $RPM_BUILD_ROOT{%{_sysconfdir},%{_bindir}}
 
-install vfu/vfu $RPM_BUILD_ROOT%{_bindir}
-install rx/rx_* $RPM_BUILD_ROOT%{_bindir}
-install vfu.1 $RPM_BUILD_ROOT%{_mandir}/man1
+install vfu/vfu rx/rx_* $RPM_BUILD_ROOT%{_bindir}
 install vfu.conf $RPM_BUILD_ROOT%{_sysconfdir}
 
 %clean
@@ -91,7 +88,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CONFIG FAQ HISTORY INSTALL NOTES README README.DOS THANKS.TO TODO XWINDOW.NOTES
+%doc CONFIG FAQ HISTORY NOTES README README.DOS THANKS.TO TODO XWINDOW.NOTES rx/README
 %attr(755,root,root) %{_bindir}/*
-%{_mandir}/man?/*
 %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/*
