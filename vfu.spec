@@ -75,6 +75,7 @@ G³ówne jego zalety to:
 
 %build
 ./build
+mv rx/README rx/README.rx
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -88,6 +89,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CONFIG FAQ HISTORY NOTES README README.DOS THANKS.TO TODO XWINDOW.NOTES rx/README
+%doc CONFIG FAQ HISTORY NOTES README README.DOS THANKS.TO TODO XWINDOW.NOTES rx/README.rx
 %attr(755,root,root) %{_bindir}/*
 %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/*
