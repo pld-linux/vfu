@@ -91,4 +91,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc CONFIG FAQ HISTORY NOTES README README.DOS THANKS.TO TODO XWINDOW.NOTES rx/README.rx
 %attr(755,root,root) %{_bindir}/*
-%config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/*
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/*
