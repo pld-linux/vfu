@@ -1,5 +1,5 @@
 Summary:	VFU is console (text mode) file manager for UNIX/Linux
-Summary(pl.UTF-8):   VFU - tekstowy zarządca plików dla Uniksa/Linuksa
+Summary(pl.UTF-8):	VFU - tekstowy zarządca plików dla Uniksa/Linuksa
 Name:		vfu
 Version:	4.05
 Release:	0.1
