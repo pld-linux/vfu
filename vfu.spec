@@ -1,5 +1,5 @@
 Summary:	VFU is console (text mode) file manager for UNIX/Linux
-Summary(pl):	VFU - tekstowy zarz±dca plików dla Uniksa/Linuksa
+Summary(pl.UTF-8):   VFU - tekstowy zarzÄ…dca plikÃ³w dla Uniksa/Linuksa
 Name:		vfu
 Version:	4.05
 Release:	0.1
@@ -39,35 +39,35 @@ are:
 - Works fine under xterm, rxvt, kvt (with colors etc.)
 - and much more...
 
-%description -l pl
-VFU jest konsolowym (tekstowym) zarz±dc± plików dla Uniksa/Linuksa.
-G³ówne jego zalety to:
+%description -l pl.UTF-8
+VFU jest konsolowym (tekstowym) zarzÄ…dcÄ… plikÃ³w dla Uniksa/Linuksa.
+GÅ‚Ã³wne jego zalety to:
 - tryb tekstowy (tak!)
 - szybkie polecenia jednoklawiszowe
-- kopiowanie/przenoszenie/usuwanie wybranych plików/jednego
-  pliku/jednego pliku kiedy wiêcej jest wybranych
+- kopiowanie/przenoszenie/usuwanie wybranych plikÃ³w/jednego
+  pliku/jednego pliku kiedy wiÄ™cej jest wybranych
 - pytanie o nadpisanie przy kopiowaniu/przenoszeniu
   (tak/nie/zawsze/nigdy)
-- uzupe³nianie nazw (tak¿e rozszerzone, np. '*some[az].zip')
-- u¿yteczna funkcja zmiany katalogu (z histori± i ulubionymi
+- uzupeÅ‚nianie nazw (takÅ¼e rozszerzone, np. '*some[az].zip')
+- uÅ¼yteczna funkcja zmiany katalogu (z historiÄ… i ulubionymi
   katalogami)
-- drzewo katalogów (z rozmiarami)
-- obliczanie rozmiarów katalogów (jednego/wszystkich)
-- obliczanie rozmiarów katalogów w locie (cache jako opcja)
-- obs³uga zewnêtrznych narzêdzi konfigurowalna przez u¿ytkownika
-- interaktywne/ósemkowe chmod i chown (dla wybranych plików/jednego
+- drzewo katalogÃ³w (z rozmiarami)
+- obliczanie rozmiarÃ³w katalogÃ³w (jednego/wszystkich)
+- obliczanie rozmiarÃ³w katalogÃ³w w locie (cache jako opcja)
+- obsÅ‚uga zewnÄ™trznych narzÄ™dzi konfigurowalna przez uÅ¼ytkownika
+- interaktywne/Ã³semkowe chmod i chown (dla wybranych plikÃ³w/jednego
   pliku)
-- kolor zale¿ny od rodzaju pliku (konfigurowalny)
-- przeszukiwanie przyrostowe i maski we wszystkich listach plików
+- kolor zaleÅ¼ny od rodzaju pliku (konfigurowalny)
+- przeszukiwanie przyrostowe i maski we wszystkich listach plikÃ³w
 - rekurencyjne przeszukiwanie
-- obs³uga archiwów: tar, tgz, bz2, zip, uc2, arj, jar, rar, lim, lha,
+- obsÅ‚uga archiwÃ³w: tar, tgz, bz2, zip, uc2, arj, jar, rar, lim, lha,
   ha
-- obs³uga FTP (podobna do archiwów)
-- wbudowana przegl±darka tekstu i szesnastkowa z edytorem
+- obsÅ‚uga FTP (podobna do archiwÃ³w)
+- wbudowana przeglÄ…darka tekstu i szesnastkowa z edytorem
   heksadecymalnym
 - wbudowany edytor tekstu
 - automatyczne montowanie (opcjonalnie)
-- dzia³a dobrze pod xtermem, rxvt, kvt (z kolorami itp.)
+- dziaÅ‚a dobrze pod xtermem, rxvt, kvt (z kolorami itp.)
 - i wiele innych...
 
 %prep
